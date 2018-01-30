@@ -1,5 +1,23 @@
 # php-training
 
+Notes from the class outline:
+
+1. Your first PHP file.
+2. Variables
+3. Embed PHP in HTML
+4. Using PHP to process forms
+5. URL and Form variables
+6. Basic programming constructs
+    control statements - if/else and switch/case
+    loops
+    boolean variables
+7. Functions
+8. Arrays
+9. Email delivery
+10. Databases and Recordsets
+11. Working with User Sessions
+
+
 Day 2 outline:
 
 Review yesterday
