@@ -5,22 +5,18 @@
 </head>
 <body>
 
-<?
+	<?
+		$age = 15;
 
-	$age = 55;
+		do
+		{
+			print( "You are not old enough to enter this club.<br>" );
+			$age++;
+		}
+		while( $age < 18 );
 
-	do
-	{
-		print( "You are not old enough to enter this club." );
-		print( "Sorry, try again when you're older." );
-
-		$age++;
-	}
-	while( $age < 18 );
-
-	print( "goodbye." );
-
-?>
+		print( "Goodbye" );
+	?>
 
 </body>
 </html>

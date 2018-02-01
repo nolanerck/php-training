@@ -1,24 +1,19 @@
 <?
+	$conn = new mysqli( "localhost", "root", "root", "test" );
 
-	$conn = new mysqli( "localhost", "root", "root", "test2" );
+	//print_r( $conn );
 
-//	print_r( $conn );
-
-	$sql = "SELECT * FROM tblTest";
+	$sql = "SELECT * FROM RockBands ORDER BY BandName";
 
 	$result = $conn->query( $sql );
 
-//	print_r( $result );
+	//print_r( $result );
 
 	while( $row = $result->fetch_assoc() )
 	{
-		print( $row[ "firstName" ] );
+		print( $row[ "BandName" ] );
+		print( $row[ "Genre" ] );
+		print( $row[ "YearFormed" ] );
 		print( "<br>" );
 	}
-
-/*
-	$conn = new PDO( "mysql:host=localhost;tst", "admin", "" );
-
-	print_r( $conn );
-*/
 ?>

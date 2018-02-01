@@ -5,47 +5,80 @@
 </head>
 <body>
 
-<?
+	<?
+		$myAge = 45;
+
+/*		print "My age is " . $myAge . " and i will be " 
+						   . $myAge . " for the rest of the year.";
+*/
+
+//		print "My age is {$myAge} and I will be {$myAge} for the rest of the year."; 
+	?>
+
+	<?
+		// addition w/ quoted and un-quoted variables.
+
+/*		$testScore = "100";
+		$bonusPoint = 5;
+
+		$totalScore = $testScore + $bonusPoint;
+
+		print( "Your combined score is: {$totalScore}" );
+*/		
+	?>
+
+	<?
+		// boolean / logical operators
+
+/*		$isRegistered = true;
+		$hasParkingPermit = false;
+
+		if( $isRegistered == true )
+		{
+			if( $hasParkingPermit == true )
+			{
+				print( "Thank you for regstering for school and paying for parking." );	
+			}
+			else
+			{
+				print( "Thank you for registering and walking to save the environment." );
+			}
+		}
+*/
 /*
-	$myAge = 45;
+		$isRegistered = true;
+		$hasParkingPermit = false;
 
-	print "My Age is {$myAge}<br>";
-
-	if( $myAge == 21 )
-	{
-		print "Happy birthday! Welcome to the club!<br>";
-	}
-
-	print "My Age is {$myAge}";
-*/
-?>
-
-<?
-	print "<br>Logical Operators Demo<br>";
-
-	$isRegistered = true;
-	$hasParkingPermit = true;
-
-/*	if( $isRegistered == true )
-	{
-		if( $hasParkingPermit == true )
+		if( $isRegistered == true && $hasParkingPermit == true )
 		{
-			print( "Thank you for regstering for school and paying for parking!" );
+			print( "Thank you for regstering for school and paying for parking." );
 		}
-		else
+		else if( $isRegistered == true || $hasParkingPermit == true )
 		{
-			print( "thank you for registering for school and walking to save the environment." );
+			print( "Thank you for buying SOMEthing to pay our bills." );
+
+			if( $isRegistered == true )
+			{
+				print( "Ah! you registered for class!" );
+			}
+			else if( $hasParkingPermit == true )
+			{
+				print( "Ah! you paid for parking!" );
+			}
 		}
-	}
 */
 
-	if( $isRegistered && $hasParkingPermit && $paidTuition && $livesIntheDistrict )
-	{
-		print( "Thank you for regstering for school and paying for parking!" );
-	}
+		$isRegistered = true;
+		$hasParkingPermit = false;
+		$paidTuition = false;
+		$livesInTheDistrict = false;
 
+		if( ( $isRegistered && !$hasParkingPermit ) || ( $paidTuition && $livesInTheDistrict ) )
+		{
+			print( "Welcome to school!" );
+		}		
 
-?>
+	?>
 
 
 
