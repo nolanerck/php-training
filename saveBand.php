@@ -1,27 +1,15 @@
 <?
-	$conn = new mysqli( "localhost", "root", "root", "MusicApp" );
+	//print $_POST[ "BandName" ];
 
-	if( $_POST[ "RockBandID" ] == "" )
-	{
-		$sql = "INSERT INTO tblRockBands( BandName, Genre ) VALUES ( '{$_POST[ "BandName" ]}', '{$_POST[ "Genre" ]}' )";
-	}
-	else
-	{
-		$sql = "UPDATE tblRockBands 
-				SET BandName = '{$_POST["BandName"]}', 
-				    Genre = '{$_POST["Genre"]}' 
-				WHERE RockBandID = {$_POST["RockBandID"]}";
+	//print_r( $_POST );
 
-	}
+	include "inc/rockBandsUtils.php";
 
-	if( $_POST[ "BandName" ] != "" )
-	{
-		$conn->query( $sql );
-	}
+	saveBand( $_POST[ "BandName" ], 
+			  $_POST[ "Genre" ], 
+			  $_POST[ "YearFormed" ] );
 
-	$conn->close();
+//	header( "Location: rockBands.php" );
 ?>
 
-<script>
-	location.href = "listRockBands.php";
-</script>
+<script>location.href = "rockBands.php";</script>

@@ -1,13 +1,8 @@
 <?
-	$conn = new mysqli( "localhost", "root", "root", "MusicApp" );
 
-	$sql = "DELETE FROM tblRockBands WHERE RockBandID = {$_GET["RockBandID"]}";
+	include "inc/rockBandsUtils.php";
 
-	$conn->query( $sql );
+	deleteBand( $_GET[ "RockBandID" ] );
 
-	$conn->close();
+	header( "Location: rockBands.php" );
 ?>
-
-<script>
-	location.href = "listRockBands.php";
-</script>
